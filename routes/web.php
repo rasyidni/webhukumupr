@@ -18,4 +18,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/berita', [NewsController::class, 'index']);
+//berita
+Route::get('/berita', [NewsController::class, 'index']) -> name('berita');
+
+Route::get('/tambahberita', [NewsController::class, 'createnews']) -> name('tambahberita');
+
+Route::post('/insertberita', [NewsController::class, 'insertnews']) -> name('insertberita');
+
+Route::get('/tampilkanberita/{id}', [NewsController::class, 'tampilkannews']) -> name('tampilkanberita');
+
+Route::post('/editberita/{id}', [NewsController::class, 'editnews']) -> name('editberita');
+
+Route::get('/deleteberita/{id}', [NewsController::class, 'deletenews']) -> name('deleteberita');
+//berita
+
+
+
+
+
