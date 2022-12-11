@@ -10,11 +10,11 @@ class NewsController extends Controller
 {
     public function index(){
         $data = News::all();
-        return view('berita/news', compact('data'));
+        return view('admin/berita/news', compact('data'));
     }
 
     public function createnews(){
-        return view('berita/createnews');
+        return view('admin/berita/createnews');
     }
 
     public function insertnews(Request $request){
@@ -35,7 +35,7 @@ class NewsController extends Controller
     public function tampilkannews($id) {
         $data = News::find($id);
 
-        return view('berita/updatenews', compact('data'));
+        return view('admin/berita/updatenews', compact('data'));
     }
 
     public function editnews(Request $request, $id){
@@ -43,18 +43,21 @@ class NewsController extends Controller
         
         $rules = [
             'judul' => 'required|max:200',
-            'gambar' => 'required|image',
+            'gambar' => 'image',
             'isi' => 'required'
         ];
 
         $validatedData = $request->validate($rules);
 
-        if($request->oldImage) {
-            Storage::delete($request->oldImage);
-        }
+        if($request->file('gambar')){
 
-        $validatedData['gambar'] = $request->file('gambar')->store('berita');
-        
+            if($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            
+            $validatedData['gambar'] = $request->file('gambar')->store('berita');
+        }
+            
         $data->update($validatedData);
 
         return redirect() -> route('berita')->with('sukses', 'Data berhasil di update');
