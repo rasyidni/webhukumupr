@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Berita</h1>
+                  <h1 class="m-0 text-dark">Halaman Update Kajian</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -19,11 +19,11 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <form action="/editberita/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
+            <form action="/editkajian/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Judul Berita</label>
-                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> judul }}">
+                <label for="exampleInputEmail1" class="form-label">Judul Kajian</label>
+                <input type="text" name = "judul" placeholder="Masukkan Judul Kajian" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> judul }}">
                 @error('judul')
                 <div class="invalid-feedback">
                   {{ $message }}
@@ -33,12 +33,12 @@
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Gambar</label>
                 <input type="hidden" name="oldImage" value="{{ $data -> gambar }}">
+                </br>
                 @if ($data -> gambar)
-                <img src="{{ asset('storage/'.$data -> gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                <img src="{{ asset('storage/'.$data -> gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block" style="border: 1px solid #000000;">
                 @else
-                <img class="img-preview img-fluid mb-3 col-sm-5 ">
+                <img class="img-preview img-fluid mb-3 col-sm-5 " style="border: 1px solid #000000;">
                 @endif
-                
                 <input type="file" id="gambar" name="gambar" class="form-control @error('gambar') is-invalid @enderror" value="{{ $data -> gambar }}" onchange="previewImage()">
                 @error('gambar')
                 <div class="invalid-feedback">
@@ -47,9 +47,28 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Isi Berita</label>
-                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Berita">{{ $data -> isi }}</textarea>
+                <label for="exampleInputEmail1" class="form-label">Isi Kajian</label>
+                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Kajian">{{ $data -> isi }}</textarea>
                 @error('isi')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Dokumen Kajian (pdf)</label>
+                <input type="hidden" name="oldFile" value="{{ $data -> file }}">
+                </br>
+                </br>
+                @if ($data -> file)
+                <embed type="application/pdf" src="{{ asset('storage/'.$data -> file) }}" class="file-preview" width="600" height="400" style="border: 1px solid #000000;"></embed>
+                @else
+                <embed type="application/pdf" class="file-preview" width="600" height="400" style="border: 1px solid #000000;"></embed>
+                @endif
+                </br>
+                </br>
+                <input type="file" id="file" name="file" class="form-control @error('file') is-invalid @enderror" value="{{ $data -> file }}" onchange="previewFile()">
+                @error('file')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>
@@ -67,9 +86,23 @@
 
     <script>
 
+      function previewFile(){
+        const file = document.querySelector('#file');
+        const filePreview = document.querySelector('.file-preview');
+
+        filePreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(file.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+          filePreview.src = oFREvent.target.result;
+        }
+      }
+
       function previewImage(){
         const gambar = document.querySelector('#gambar');
-        const imgPreview = document.querySelector('.img-preview');
+        const imgPreview = document.querySelector('.gambar-preview');
 
         imgPreview.style.display = 'block';
 
@@ -85,26 +118,4 @@
 
 @endsection
 
-  {{-- <div class="card-body">
-    <form action="/editberita/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
-      @csrf
-      <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Judul</label>
-                              <input type="text" name = "judul" class="form-control" id="exampleInputEmail1" value="{{ $data -> judul }}" >
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Isi</label>
-                                <input type="text" name = "isi" class="form-control" id="exampleInputEmail1" value="{{ $data -> isi }}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Gambar</label>
-                                <input type="file" name = "gambar" class="form-control" id="exampleInputEmail1" value="{{ $data -> gambar }}">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div> --}}
+ 

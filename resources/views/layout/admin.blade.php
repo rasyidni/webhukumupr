@@ -185,7 +185,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/kajian" class="nav-link">
               <i class="nav-icon fab fa-researchgate"></i>
               <p>
                 Kajian
@@ -193,7 +193,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/regulasi" class="nav-link">
               <i class="nav-icon fa fa-tasks"></i>
               <p>
                 Regulasi
@@ -201,7 +201,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/ukm" class="nav-link">
               <i class="nav-icon fas fa-address-book"></i>
               <p>
                 UKM
@@ -209,7 +209,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/webinar" class="nav-link">
               <i class="nav-icon fas fa-book-reader"></i>
               <p>
                 Webinar

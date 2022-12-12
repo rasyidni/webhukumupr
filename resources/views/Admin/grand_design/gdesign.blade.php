@@ -46,14 +46,8 @@
                     <td>{{ $item -> link_gdrive }}</td>
                     <td>{{ $item -> created_at -> format('D M Y') }}</td>
                     <td>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li style="margin-bottom: 8px">
-                          <a href="/deletegdesign/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')">Hapus</a>
-                        </li>
-                        <li>
-                          <a href="/tampilkangdesign/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px ">Edit</a>
-                        </li>
-                      </ul>
+                      <a href="/deletegdesign/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')"><i class='fa fa-trash'></i></a>
+                      <a href="/tampilkangdesign/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
                     </td>
                   </tr>
                   @endforeach

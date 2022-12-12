@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Berita</h1>
+                  <h1 class="m-0 text-dark">Halaman Update Regulasi</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -19,11 +19,11 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <form action="/editberita/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
+            <form action="/editwebinar/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Judul Berita</label>
-                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> judul }}">
+                <label for="exampleInputEmail1" class="form-label">Judul Webinar</label>
+                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> judul }}" placeholder="Masukkan Judul Webinar" required>
                 @error('judul')
                 <div class="invalid-feedback">
                   {{ $message }}
@@ -31,25 +31,9 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Gambar</label>
-                <input type="hidden" name="oldImage" value="{{ $data -> gambar }}">
-                @if ($data -> gambar)
-                <img src="{{ asset('storage/'.$data -> gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
-                @else
-                <img class="img-preview img-fluid mb-3 col-sm-5 ">
-                @endif
-                
-                <input type="file" id="gambar" name="gambar" class="form-control @error('gambar') is-invalid @enderror" value="{{ $data -> gambar }}" onchange="previewImage()">
-                @error('gambar')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-                @enderror
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Isi Berita</label>
-                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Berita">{{ $data -> isi }}</textarea>
-                @error('isi')
+                <label for="exampleInputEmail1" class="form-label">Link Google Form Pendaftaran Webinar</label>
+                <input class="form-control @error('link_gform') is-invalid @enderror" name = "link_gform" rows="3" placeholder="Masukkan Link Google Form" value="{{ $data -> link_gform }}" required>
+                @error('link_gform')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>

@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Berita</h1>
+                  <h1 class="m-0 text-dark">Halaman Tambah Kajian</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -19,11 +19,11 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <form action="/insertberita" method="POST" enctype="multipart/form-data">
+            <form action="/insertkajian" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label ">Judul Berita</label>
-                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" >
+                <label for="exampleInputEmail1" class="form-label ">Judul Kajian</label>
+                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" placeholder="Masukkan Judul Kajian">
                 @error('judul')
                 <div class="invalid-feedback">
                   {{ $message }}
@@ -41,9 +41,18 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Isi Berita</label>
-                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Berita"></textarea>
+                <label for="exampleInputEmail1" class="form-label">Isi Kajian</label>
+                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Kajian"></textarea>
                 @error('isi')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Dokumen Kajian (pdf)</label>
+                <input type="file" id="file" name = "file" class="form-control @error('file') is-invalid @enderror">
+                @error('file')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>

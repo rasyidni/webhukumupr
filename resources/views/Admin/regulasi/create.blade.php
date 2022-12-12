@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Berita</h1>
+                  <h1 class="m-0 text-dark">Halaman Tambah Regulasi</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -19,31 +19,21 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <form action="/insertberita" method="POST" enctype="multipart/form-data">
+            <form action="/insertregulasi" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label ">Judul Berita</label>
-                <input type="text" name = "judul" class="form-control @error('judul') is-invalid @enderror" id="exampleInputEmail1" >
-                @error('judul')
+                <label for="exampleInputEmail1" class="form-label ">Nama Regulasi</label>
+                <input type="text" name = "nama" class="form-control @error('nama') is-invalid @enderror" id="exampleInputEmail1" placeholder="Masukkan nama regulasi">
+                @error('nama')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Gambar</label>
-                <img class="img-preview img-fluid mb-3 col-sm-5">
-                <input type="file" id="gambar" name = "gambar" class="form-control @error('gambar') is-invalid @enderror" onchange="previewImage()">
-                @error('gambar')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-                @enderror
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Isi Berita</label>
-                <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Berita"></textarea>
-                @error('isi')
+                <label for="exampleInputEmail1" class="form-label">Link Google Drive Dokumen</label>
+                <input class="form-control @error('link_gdrive') is-invalid @enderror" name = "link_gdrive" placeholder="Masukkan Link Google Drive">
+                @error('link_gdrive')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>
