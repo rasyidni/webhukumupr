@@ -84,27 +84,3 @@
     </script>
 
 @endsection
-
-  {{-- <div class="card-body">
-    <form action="/editberita/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
-      @csrf
-      <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Judul</label>
-                              <input type="text" name = "judul" class="form-control" id="exampleInputEmail1" value="{{ $data -> judul }}" >
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Isi</label>
-                                <input type="text" name = "isi" class="form-control" id="exampleInputEmail1" value="{{ $data -> isi }}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Gambar</label>
-                                <input type="file" name = "gambar" class="form-control" id="exampleInputEmail1" value="{{ $data -> gambar }}">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div> --}}

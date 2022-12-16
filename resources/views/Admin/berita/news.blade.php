@@ -48,7 +48,7 @@
                 <td>{{ $item -> updated_at -> format('l, d M Y H:i') }}</td>
                 <td>
                   <a href="/deleteberita/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')"><i class='fa fa-trash'></i></a>
-                      <a href="/tampilkanberita/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
+                  <a href="/tampilkanberita/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
                 </td>
               </tr>
               @endforeach

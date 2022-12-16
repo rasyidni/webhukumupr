@@ -7,12 +7,24 @@
 
   <title>Administrator </title>
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ asset('template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/jqvmap/jqvmap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/summernote/summernote-bs4.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   
@@ -52,7 +64,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/" class="nav-link">
+            <a href="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -69,91 +81,85 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/tentangkami" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tentang Kami</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kagama" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Agama</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kdalamnegeri" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Dalam Negeri</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kwirausaha" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Kewirausahaan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kkomunikasi" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. K., Media dan Informasi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kkpolitik" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. K. Politik dan Hukum</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>K. Dalam Negeri</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kkajian" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. K. Strategis dan Advokasi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kksosial" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. K. Sosial dan L. H.</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kluarnegeri" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Luar Negeri</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="kpemuda" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Pemuda dan Olahraga</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/kperempuan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. P. Perempuan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/ksdm" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Pengembangan SDM</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/ksekretariat" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>K. Sekretariat</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/unitpenerangan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Unit Penerangan Internal</p>
                 </a>
