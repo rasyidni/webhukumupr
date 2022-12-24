@@ -6,6 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Administrator </title>
+  <link rel="icon" href="{{ asset('logofhupr.png') }}" type="image/icon type">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css') }}">
@@ -39,7 +40,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Administrator</a>
+        <a href="#" class="nav-link">Administrator</a>
       </li>
     </ul>
 
@@ -50,7 +51,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="{{ asset('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{ asset('logofhupr.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Administrator</span>
     </a>
@@ -222,6 +223,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link alert_notif">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Log Out
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -281,6 +290,48 @@
   .catch( error => {
     console.error( error );
   } );
+
+  ClassicEditor.create(document.querySelector('#editor1'), {
+    removePlugins: ['CKFinderUploadAdapter', 'CKFinder', 'EasyImage', 'Image', 'ImageCaption', 'ImageStyle', 'ImageToolbar', 'ImageUpload', 'MediaEmbed'],
+  })
+  .catch( error => {
+    console.error( error );
+  } );
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
+<?php if(@$_GET['login']){ ?>
+  <script>
+    Swal.fire({            
+      icon: 'success',                   
+      title: 'Sukses',    
+      text: 'Berhasil Login',                        
+      timer: 3000,                                
+      showConfirmButton: false
+      })
+  </script>
+  <!-- jangan lupa untuk menambahkan unset agar sweet alert tidak muncul lagi saat di refresh -->
+<?php unset($_GET['login']); } ?>
+
+<script>
+  $('.alert_notif').on('click',function(){
+    var getLink = $(this).attr('href');
+    Swal.fire({
+      title: "Yakin untuk Log Out?",            
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'Ya',
+      cancelButtonColor: '#3085d6',
+      cancelButtonText: "Batal"
+    }).then(result => {
+    //jika klik ya maka arahkan ke proses.php
+      if(result.isConfirmed){
+        window.location.href = getLink
+      }
+    })
+      return false;
+    });
 </script>
 </body>
 </html>

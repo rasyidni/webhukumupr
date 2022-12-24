@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Unit Penerangan Internal</h1>
+                  <h1 class="m-0 text-dark">Halaman Kementerian Pemberdayaan Perempuan</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -29,61 +29,72 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_menteri) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Menteri</h6>
-                      <p class="text-muted mb-4">Max</p>
+                      <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                     </div>
                   </div>
             </div>
 
-            <div class="col">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_dkip) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Direktur Jenderal Kajian Isu Perempuan</h6>
-                  <p class="text-muted mb-4">Ahmad</p>
+                  <p class="text-muted mb-4">{{ $data->nama_dkip }}</p>
                 </div>
               </div>
             </div>
             
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_dpp) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Direktur Jenderal Perlindungan Perempuan</h6>
-                      <p class="text-muted mb-4">Dinda</p>
+                      <p class="text-muted mb-4">{{ $data->nama_dpp }}</p>
                     </div>
                   </div>
             </div>
+
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_staff) }}"
+                    class="rounded-circle img-fluid" style="width: 200px;" />
+                  <h6 class="mb-2">Staff Kementerian</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_staff }}</p>
+                </div>
+              </div>
+        </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Fokus Utama</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify">
+              {!! $data->fokus_utama !!}
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Program Kerja</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify">
+              {!! $data->proker !!}
+              </div>
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkankperempuan/1" type="button" class="btn btn-primary float-left"><i ></i>Edit Data</a>
         </div>
       </div>
     </div>

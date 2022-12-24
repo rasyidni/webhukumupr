@@ -29,61 +29,95 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
+            <div class="col-md-3">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_menteri) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                      </br>
+                    </br>
                       <h6 class="mb-2">Menteri Koordinator</h6>
-                      <p class="text-muted mb-4">Max</p>
+                      <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                     </div>
                   </div>
             </div>
 
-            <div class="col">
+            <div class="col-md-3">
               <div class="card" style="border-radius: 15px; height: 20rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_dsosial) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
+                    </br>
+                  </br>
                   <h6 class="mb-2">Direktur Jenderal Sosial</h6>
-                  <p class="text-muted mb-4">Ahmad</p>
+                  <p class="text-muted mb-4">{{ $data->nama_dsosial }}</p>
                 </div>
               </div>
             </div>
             
-            <div class="col">
+            <div class="col-md-3">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_dlingkungan) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                      </br>
+                    </br>
                       <h6 class="mb-2">Direktur Jenderal Lingkungan Hidup & Tata Ruang</h6>
-                      <p class="text-muted mb-4">Dinda</p>
+                      <p class="text-muted mb-4">{{ $data->nama_dlingkungan }}</p>
                     </div>
                   </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
-              <h5 class="mb-2">Fokus Utama</h5>
-              <p>
-                Teks
-              </p>
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 20rem;">
+                    <div class="card-body text-center">
+                        <img src="{{ asset('storage/'. $data->gambar_staff1) }}"
+                        class="rounded-circle img-fluid" style="width: 200px;" />
+                    </br>
+                    </br>
+                      <h6 class="mb-2">Staff Kementerian</h6>
+                      <p class="text-muted mb-4">{{ $data->nama_staff1 }}</p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 20rem;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_staff2) }}"
+                      class="rounded-circle img-fluid" style="width: 200px;" />
+                    </br>
+                  </br>
+                  <h6 class="mb-2">Staff Kementerian</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_staff2 }}</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
+              <h5 class="mb-2">Fokus Utama</h5>
+              <div class="text-justify">
+              {!! $data->fokus_utama !!}
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Program Kerja</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify">
+              {!! $data->proker !!}
+              </div>
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkankksosial/1" type="button" class="btn btn-primary float-left"><i ></i>Edit Data</a>
         </div>
       </div>
     </div>

@@ -6,14 +6,14 @@ body {
 }
 
 a {
-    color: #1dbf73;
+    color: #ffffff;
     transition: 0.3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #353535;
+    color: #fb0404;
     outline: none;
     text-decoration: none;
 }
@@ -48,7 +48,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #1dbf73;
+    background: #5b1917;
     color: #ffffff;
     width: 45px;
     height: 45px;
@@ -68,7 +68,7 @@ h6 {
 
 /* ------------------ Header CSS ------------------- */
 .header {
-    padding: 30px 0;
+    padding: 0 0;
     height: 92px;
     position: fixed;
     left: 0;
@@ -80,13 +80,14 @@ h6 {
 
 .header.header-scrolled {
     background: rgba(0, 0, 0, 0.9);
-    padding: 20px 0;
-    height: 72px;
+    padding: 0 0;
+    height: 92px;
     transition: all 0.3s;
 }
 
 .header .logo {
     float: left;
+    padding-top: 20px;
 }
 
 .header .logo h1 {
@@ -229,7 +230,7 @@ h6 {
     display: inline-block;
     padding: 10px 30px;
     transition: 0.3s;
-    background: #1dbf73;
+    background: #5b1917;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
@@ -240,7 +241,7 @@ h6 {
 
 .slider .btn-get-started:hover {
     background: #ffffff;
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 
@@ -249,6 +250,7 @@ h6 {
 #nav-menu-container {
     float: right;
     margin: 0;
+    padding-top: 30px;
 }
 
 .nav-menu,
@@ -303,7 +305,7 @@ h6 {
 
 .nav-menu li:hover > a,
 .nav-menu > .menu-active > a {
-    color: #1dbf73;
+    color: #fb0404;
 }
 
 .nav-menu > li {
@@ -331,7 +333,7 @@ h6 {
 }
 
 .nav-menu ul li:hover > a {
-    color: #1dbf73;
+    color: #fb0404;
 }
 
 .nav-menu ul ul {
@@ -394,7 +396,7 @@ h6 {
 }
 
 #mobile-nav ul li a:hover {
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 #mobile-nav ul li li {
@@ -402,7 +404,7 @@ h6 {
 }
 
 #mobile-nav ul li.menu-active a {
-    color: #1dbf73;
+    color: #fb0404;
 }
 
 #mobile-nav ul .menu-has-children i {
@@ -416,7 +418,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.ion-md-arrow-dropup {
-    color: #1dbf73;
+    color: #fb0404;
 }
 
 #mobile-nav ul .menu-has-children i.dicon {
@@ -428,7 +430,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-    color: #1dbf73;
+    color: #fb0404;
 }
 
 #mobile-body-overly {
@@ -458,7 +460,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* ---------------- Banner Section ----------------- */
 .banner {
-    background: url("../img/banner.jpg") center top no-repeat;
+    background: url("../../banner.png") center top no-repeat;
     background-size: cover;
     padding: 150px 0 60px 0;
     position: relative;
@@ -495,7 +497,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner .banner-box a:hover {
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .banner .banner-box a:first-child {
@@ -571,7 +573,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-left: 1px;
     text-align: center;
     position: absolute;
-    background-color: #1dbf73;
+    background-color: #5b1917;
     border-radius: 50%;
     text-align: center;
     border: 4px solid #ffffff;
@@ -592,7 +594,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about .about-col:hover i {
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .about .about-col h2 {
@@ -609,7 +611,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about .about-col h2 a:hover {
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .about .about-col p {
@@ -634,7 +636,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.3s;
     margin: 15px 30px 30px 30px;
     color: #ffffff;
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .about .about-col:hover .read-more a,
@@ -675,7 +677,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .single-service i {
     font-size: 64px;
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .single-service h4,
@@ -696,7 +698,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .call-to-action {
     position: relative;
     padding: 60px 0;
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .call-to-action .container {
@@ -720,7 +722,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 28px;
-    color: #1dbf73;
+    color: #5b1917;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -803,7 +805,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .pricing .price-details li i.ion-md-checkmark {
-    color: #1dbf73;
+    color: #5b1917;
     margin-right: 5px;
 }
 
@@ -828,11 +830,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .pricing .price-btn:hover {
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .pricing .features-price-btn {
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .pricing .features-price-btn:hover {
@@ -844,7 +846,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .pricing .features-price .price-plan {
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .pricing .features-price .price-plan p{
@@ -907,7 +909,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 30px 0 0 0;
     font-size: 60px;
     display: block;
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .skills .counters p {
@@ -949,7 +951,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #1dbf73;
+    background: #5b1917;
     color: #ffffff;
 }
 
@@ -999,7 +1001,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
     width: 60px;
     height: 36px;
-    background: #1dbf73;
+    background: #5b1917;
     border-radius: 20px;
     transition: 0.3s;
     opacity: 0;
@@ -1102,7 +1104,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .team .card:hover .card-title-wrap {
-    background: #1dbf73;
+    background: #5b1917;
 }
 
 .team .card-title-wrap .card-title,
@@ -1113,13 +1115,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .team .card-title-wrap .card-title {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold;
     color: #353535;
 }
 
 .team .card-title-wrap .card-text {
     text-align: center;
-    font-size: 14px;
+    height: 60px;
+    font-size: 13px;
     color: #666666;
 }
 
@@ -1206,7 +1210,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .testimonials .owl-dot.active {
-    background-color: #1dbf73;
+    background-color: #5b1917;
 }
 
 @media (max-width: 575px) {
@@ -1252,7 +1256,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .clients .owl-dot.active {
-    background-color: #1dbf73;
+    background-color: #5b1917;
 }
 
 
@@ -1290,7 +1294,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .contact .contact-info i {
     font-size: 48px;
     display: inline-block;
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .contact .contact-info address,
@@ -1312,7 +1316,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .contact .contact-info a:hover {
-    color: #1dbf73;
+    color: #5b1917;
 }
 
 .contact .map {
@@ -1350,11 +1354,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .contact .form input:focus,
 .contact .form textarea:focus {
-    border-color: #1dbf73;
+    border-color: #5b1917;
 }
 
 .contact .form button[type="submit"] {
-    background: #1dbf73;
+    background: #5b1917;
     border: 0;
     padding: 10px 30px;
     color: #ffffff;
@@ -1371,11 +1375,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer {
     position: relative;
     padding: 0 0 30px 0;
-    background: #000000;
+    background: #23232c;
 }
 
 .footer .footer-top {
-    background: #1dbf73;
+    background: #5b1917;
     padding: 60px 0 30px 0;
 }
 
@@ -1403,7 +1407,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 18px;
     display: inline-block;
     background: #ffffff;
-    color: #1dbf73;
+    color: #5b1917;
     line-height: 1;
     padding: 9px 0;
     margin-right: 4px;
@@ -1511,6 +1515,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (min-width: 1024px) {
     .header .logo {
         padding-left: 60px;
+        padding-top: 0.8%;
     }
 
     .slider p {
@@ -1562,3 +1567,9 @@ body.mobile-nav-active #mobile-nav-toggle {
         padding: 0;
     }
 }
+
+.responsive {
+    width: auto;
+    max-width: 70px;
+    height: 100%;
+ }

@@ -32,10 +32,10 @@
             <div class="col">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_kepala) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Kepala UPI</h6>
-                      <p class="text-muted mb-4">Max</p>
+                      <p class="text-muted mb-4">{{ $data->nama_kepala }}</p>
                     </div>
                   </div>
             </div>
@@ -43,10 +43,10 @@
             <div class="col">
               <div class="card" style="border-radius: 15px; height: 20rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_anggota1) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Anggota UPI</h6>
-                  <p class="text-muted mb-4">Ahmad</p>
+                  <p class="text-muted mb-4">{{ $data->nama_anggota1 }}</p>
                 </div>
               </div>
             </div>
@@ -54,10 +54,10 @@
             <div class="col">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_anggota2) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Anggota UPI</h6>
-                      <p class="text-muted mb-4">Dinda</p>
+                      <p class="text-muted mb-4">{{ $data->nama_anggota2 }}</p>
                     </div>
                   </div>
             </div>
@@ -66,24 +66,20 @@
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col text-center">
               <h5 class="mb-2">Keterangan</h5>
-              <p>
-                Teks
-              </p>
+              {!! $data->penjelasan !!}
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col text-center">
               <h5 class="mb-2">Fokus Utama</h5>
-              <p>
-                Teks
-              </p>
+              {!! $data->proker !!}
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkanunitpenerangan/1" type="button" class="btn btn-primary float-left"><i ></i>Edit Data</a>
         </div>
       </div>
     </div>

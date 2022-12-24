@@ -32,40 +32,40 @@
             <div class="col">
                   <div class="card" style="border-radius: 15px;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_ketua) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Presma</h6>
-                      <p class="text-muted mb-4">@Programmer</p>
+                      <p class="text-muted mb-4">{{ $data->nama_ketua }}</p>
                     </div>
                   </div>
             </div>
             <div class="col">
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_wakil) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Wapresma</h6>
-                  <p class="text-muted mb-4">@Programmer</p>
+                  <p class="text-muted mb-4">{{ $data->nama_wakil }}</p>
                 </div>
               </div>
             </div>
             <div class="col">
                   <div class="card" style="border-radius: 15px;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_sekretaris) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Sekretaris</h6>
-                      <p class="text-muted mb-4">@Programmer</p>
+                      <p class="text-muted mb-4">{{ $data->nama_sekretaris }}</p>
                     </div>
                   </div>
             </div>
             <div class="col">
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_bendahara) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Bendahara</h6>
-                  <p class="text-muted mb-4">@Programmer</p>
+                  <p class="text-muted mb-4">{{ $data->nama_bendahara }}</p>
                 </div>
               </div>
             </div>
@@ -74,66 +74,66 @@
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col text-center">
               <h5 class="mb-2">Visi</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify" style="padding: 0 10% 0;">
+              {!! $data->visi !!}
+            </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col text-center">
               <h5 class="mb-2">Misi</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify" style="padding: 0 10% 0;">
+              {!! $data->misi !!}
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
-              <h6 class="mb-2">Email</h6>
-              <p>
-                Teks
-              </p>
-            </div>
-            <div class="col text-center">
-              <h6 class="mb-2">Instagram</h6>
-              <p>
-                Teks
-              </p>
-            </div>
-            <div class="col text-center">
-              <h6 class="mb-2">Youtube</h6>
-              <p>
-                Teks
-              </p>
-            </div>
+              <div class="col text-center">
+                <h6 class="mb-2">Email</h6>
+                <p>
+                  {{ $data->email }}
+                </p>
+              </div>
+              <div class="col text-center">
+                <h6 class="mb-2">Instagram</h6>
+                <p>
+                  {{ $data->ig }}
+                </p>
+              </div>
+              <div class="col text-center">
+                <h6 class="mb-2">Youtube</h6>
+                <p>
+                  {{ $data->youtube }}
+                </p>
+              </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col text-center">
               <h6 class="mb-2">Facebook</h6>
               <p>
-                Teks
+                {{ $data->fb }}
               </p>
             </div>
             <div class="col text-center">
               <h6 class="mb-2">Twitter</h6>
               <p>
-                Teks
+                {{ $data->twitter }}
               </p>
             </div>
             <div class="col text-center">
               <h6 class="mb-2">Line</h6>
               <p>
-                Teks
+                {{ $data->line }}
               </p>
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkantentangkami/1" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
         </div>
       </div>
     </div>

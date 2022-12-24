@@ -19,24 +19,47 @@ class UnitpeneranganController extends Controller
         return view('admin/unitpenerangan/update', compact('data'));
     }
 
-    public function editunitpenerangan(Request $request, $id){
-        $data = unitpenerangan::find($id);
+    public function editunitpenerangan(Request $request){
+        $data = unitpenerangan::find(1);
         
         $rules = [
-            'judul' => 'required|max:200',
-            'gambar' => 'image',
-            'isi' => 'required'
+            'nama_kepala' => 'required|max:200',
+            'nama_anggota1' => 'required|max:200',
+            'nama_anggota2' => 'required|max:200',
+            'gambar_kepala' => 'image',
+            'gambar_anggota1' => 'image',
+            'gambar_anggota2' => 'image',
+            'penjelasan' => 'required',
+            'proker' => 'required'
         ];
 
         $validatedData = $request->validate($rules);
 
-        if($request->file('gambar')){
+        if($request->file('gambar_kepala')){
 
-            if($request->oldImage) {
-                Storage::delete($request->oldImage);
+            if($request->oldImagek) {
+                Storage::delete($request->oldImagek);
             }
             
-            $validatedData['gambar'] = $request->file('gambar')->store('unitpenerangan');
+            $validatedData['gambar_kepala'] = $request->file('gambar_kepala')->store('unitpenerangan');
+        }
+
+        if($request->file('gambar_anggota1')){
+
+            if($request->oldImagea1) {
+                Storage::delete($request->oldImagea1);
+            }
+            
+            $validatedData['gambar_anggota1'] = $request->file('gambar_anggota1')->store('unitpenerangan');
+        }
+
+        if($request->file('gambar_anggota2')){
+
+            if($request->oldImagea2) {
+                Storage::delete($request->oldImagea2);
+            }
+            
+            $validatedData['gambar_anggota2'] = $request->file('gambar_anggota2')->store('unitpenerangan');
         }
             
         $data->update($validatedData);

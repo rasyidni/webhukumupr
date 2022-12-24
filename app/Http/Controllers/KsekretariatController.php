@@ -19,24 +19,47 @@ class KsekretariatController extends Controller
         return view('admin/ksekretariat/update', compact('data'));
     }
 
-    public function editksekretariat(Request $request, $id){
-        $data = ksekretariat::find($id);
+    public function editksekretariat(Request $request){
+        $data = ksekretariat::find(1);
         
         $rules = [
-            'judul' => 'required|max:200',
-            'gambar' => 'image',
-            'isi' => 'required'
+            'nama_menteri' => 'required|max:200',
+            'nama_dpi' => 'required|max:200',
+            'nama_dmp' => 'required|max:200',
+            'gambar_menteri' => 'image',
+            'gambar_dpi' => 'image',
+            'gambar_dmp' => 'image',
+            'fokus_utama' => 'required',
+            'proker' => 'required'
         ];
 
         $validatedData = $request->validate($rules);
 
-        if($request->file('gambar')){
+        if($request->file('gambar_menteri')){
 
-            if($request->oldImage) {
-                Storage::delete($request->oldImage);
+            if($request->oldImagem) {
+                Storage::delete($request->oldImagem);
             }
             
-            $validatedData['gambar'] = $request->file('gambar')->store('ksekretariat');
+            $validatedData['gambar_menteri'] = $request->file('gambar_menteri')->store('ksekretariat');
+        }
+
+        if($request->file('gambar_dpi')){
+
+            if($request->oldImagedpi) {
+                Storage::delete($request->oldImagedpi);
+            }
+            
+            $validatedData['gambar_dpi'] = $request->file('gambar_dpi')->store('ksekretariat');
+        }
+
+        if($request->file('gambar_dmp')){
+
+            if($request->oldImagedmp) {
+                Storage::delete($request->oldImagedmp);
+            }
+            
+            $validatedData['gambar_dmp'] = $request->file('gambar_dmp')->store('ksekretariat');
         }
             
         $data->update($validatedData);

@@ -29,60 +29,78 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; width: 15rem; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'.$data->gambar_menteri) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                    </br>
+                    </br>
                       <h6 class="mb-2">Menteri</h6>
-                      <p class="text-muted mb-4">Raja</p>
+                      <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                     </div>
                   </div>
             </div>
 
-            <div class="col">
-              <div class="card" style="border-radius: 15px; width: 15rem; height: 20rem;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'.$data->gambar_dagama) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
+                    </br>
+                    </br>
                   <h6 class="mb-2">Direktur Jenderal Lintas Agama</h6>
-                  <p class="text-muted mb-4">Agnes</p>
+                  <p class="text-muted mb-4">{{ $data->nama_dagama }}</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; width: 15rem; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_dilmu) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                      </br>
+                      </br>
                       <h6 class="mb-2">Direktur Jenderal Keamanan & Keilmuan</h6>
-                      <p class="text-muted mb-4">Ellyna</p>
+                      <p class="text-muted mb-4">{{ $data->nama_dilmu }}</p>
                     </div>
                   </div>
             </div>
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_staff) }}"
+                    class="rounded-circle img-fluid" style="width: 200px;" />
+                  </br>
+                  </br>
+                  <h6 class="mb-2">Direktur Jenderal Keamanan & Keilmuan</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_staff }}</p>
+                </div>
+              </div>
+           </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
-              <h5 class="mb-2">Fokus Utama</h5>
-              <p>
-                Teks
-              </p>
+            <div class="col-10">
+              <h5 class="mb-2 text-center">Fokus Utama</h5>
+              <div class="text-justify">
+                {!! $data->fokus_utama !!}
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
-              <h5 class="mb-2">Program Kerja</h5>
-              <p>
-                Teks
-              </p>
+            <div class="col-10">
+              <h5 class="mb-2 text-center">Program Kerja</h5>
+              <div class="text-justify">
+               {!! $data->proker !!}
+              </div>
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkankagama" type="button" class="btn btn-primary float-left"><i ></i>Edit</a>
         </div>
       </div>
     </div>

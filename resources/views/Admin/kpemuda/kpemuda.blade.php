@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Halaman Unit Penerangan Internal</h1>
+                  <h1 class="m-0 text-dark">Halaman Kementerian Pemuda dan Olahraga</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -29,71 +29,95 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_menteri) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Menteri</h6>
-                      <p class="text-muted mb-4">Max</p>
+                      <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                     </div>
                   </div>
             </div>
 
-            <div class="col">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_dolahraga) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Direktur Jenderal Keolahragaan</h6>
-                  <p class="text-muted mb-4">Ahmad</p>
+                  <p class="text-muted mb-4">{{ $data->nama_dolahraga }}</p>
                 </div>
               </div>
             </div>
             
-            <div class="col">
-                  <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
-                        <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                        <img src="{{ asset('storage/'. $data->gambar_dpemuda) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
                       <h6 class="mb-2">Direktur Jenderal Kepemudaan</h6>
-                      <p class="text-muted mb-4">Dinda</p>
+                      <p class="text-muted mb-4">{{ $data->nama_dpemuda }}</p>
                     </div>
                   </div>
             </div>
-            <div class="col">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
-                    <img src="{{ asset('storage\berita\foto.jpeg') }}"
+                    <img src="{{ asset('storage/'. $data->gambar_dso) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Direktur Jenderal Seni & Olahraga</h6>
-                  <p class="text-muted mb-4">Dinda</p>
+                  <p class="text-muted mb-4">{{ $data->nama_dso }}</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
-              <h5 class="mb-2">Fokus Utama</h5>
-              <p>
-                Teks
-              </p>
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
+                    <div class="card-body text-center">
+                        <img src="{{ asset('storage/'. $data->gambar_staff1) }}"
+                        class="rounded-circle img-fluid" style="width: 200px;" />
+                      <h6 class="mb-2">Staff Kementerian</h6>
+                      <p class="text-muted mb-4">{{ $data->nama_staff1 }}</p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_staff2) }}"
+                      class="rounded-circle img-fluid" style="width: 200px;" />
+                  <h6 class="mb-2">Staff Kementerian</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_staff2 }}</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
+              <h5 class="mb-2">Fokus Utama</h5>
+              <div class="text-justify">
+              {!! $data->fokus_utama !!}
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Program Kerja</h5>
-              <p>
-                Teks
-              </p>
+              <div class="text-justify">
+              {!! $data->proker !!}
+              </div>
             </div>
           </div>
 
         </div>
         <div class="card-footer">
-          <a href="kegiatan.php" type="button" class="btn btn-primary float-left"><i ></i>Edit Tentang Kami</a>
+          <a href="/tampilkankpemuda/1" type="button" class="btn btn-primary float-left"><i ></i>Edit Data</a>
         </div>
       </div>
     </div>

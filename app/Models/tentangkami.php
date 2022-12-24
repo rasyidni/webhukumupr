@@ -10,5 +10,5 @@ class tentangkami extends Model
     use HasFactory;
     protected $table = 'tentangkami';
     protected $guarded = [];
-    protected $dates = ['created_at'];
+    protected $dates = ['updated_at'];
 }

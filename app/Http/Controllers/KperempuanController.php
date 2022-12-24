@@ -20,24 +20,58 @@ class KperempuanController extends Controller
         return view('admin/kperempuan/update', compact('data'));
     }
 
-    public function editkperempuan(Request $request, $id){
-        $data = kperempuan::find($id);
+    public function editkperempuan(Request $request){
+        $data = kperempuan::find(1);
         
         $rules = [
-            'judul' => 'required|max:200',
-            'gambar' => 'image',
-            'isi' => 'required'
+            'nama_menteri' => 'required|max:200',
+            'nama_dkip' => 'required|max:200',
+            'nama_dpp' => 'required|max:200',
+            'nama_staff' => 'required|max:200',
+            'gambar_menteri' => 'image',
+            'gambar_dkip' => 'image',
+            'gambar_dpp' => 'image',
+            'gambar_staff' => 'image',
+            'fokus_utama' => 'required',
+            'proker' => 'required'
         ];
 
         $validatedData = $request->validate($rules);
 
-        if($request->file('gambar')){
+        if($request->file('gambar_menteri')){
 
-            if($request->oldImage) {
-                Storage::delete($request->oldImage);
+            if($request->oldImagem) {
+                Storage::delete($request->oldImagem);
             }
             
-            $validatedData['gambar'] = $request->file('gambar')->store('kperempuan');
+            $validatedData['gambar_menteri'] = $request->file('gambar_menteri')->store('kperempuan');
+        }
+
+        if($request->file('gambar_dkip')){
+
+            if($request->oldImagedkip) {
+                Storage::delete($request->oldImagedkip);
+            }
+            
+            $validatedData['gambar_dkip'] = $request->file('gambar_dkip')->store('kperempuan');
+        }
+
+        if($request->file('gambar_dpp')){
+
+            if($request->oldImagedpp) {
+                Storage::delete($request->oldImagedpp);
+            }
+            
+            $validatedData['gambar_dpp'] = $request->file('gambar_dpp')->store('kperempuan');
+        }
+
+        if($request->file('gambar_staff')){
+
+            if($request->oldImagest) {
+                Storage::delete($request->oldImagest);
+            }
+            
+            $validatedData['gambar_staff'] = $request->file('gambar_staff')->store('kperempuan');
         }
             
         $data->update($validatedData);
