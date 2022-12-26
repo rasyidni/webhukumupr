@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class NewsController extends Controller
 {
     public function index(){
-        $data = News::all();
+        $data = News::paginate(10);
         return view('admin/berita/news', compact('data'));
     }
 

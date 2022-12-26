@@ -46,7 +46,7 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Wakil Presma</label>
+                <label for="exampleInputEmail1" class="form-label">Nama Wakil Presma</label>
                 <input type="text" name = "nama_wakil" class="form-control @error('nama_wakil') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> nama_wakil }}">
                 @error('nama_wakil')
                 <div class="invalid-feedback">
@@ -71,7 +71,7 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Sekretaris</label>
+                <label for="exampleInputEmail1" class="form-label"> Nama Sekretaris</label>
                 <input type="text" name = "nama_sekretaris" class="form-control @error('nama_sekretaris') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> nama_sekretaris }}">
                 @error('nama_sekretaris')
                 <div class="invalid-feedback">
@@ -96,7 +96,32 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Bendahara</label>
+                <label for="exampleInputEmail1" class="form-label"> Nama Staff Sekretaris</label>
+                <input type="text" name = "nama_staffs" class="form-control @error('nama_staffs') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> nama_staffs }}">
+                @error('nama_staffs')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Gambar Staff Sekretaris</label>
+                <input type="hidden" name="oldImagess" value="{{ $data -> gambar_staffs }}">
+                @if ($data -> gambar_staffs)
+                <img src="{{ asset('storage/'.$data -> gambar_staffs) }}" class="img-previewss img-fluid mb-3 col-sm-5 d-block">
+                @else
+                <img class="img-previewss img-fluid mb-3 col-sm-5 ">
+                @endif
+                
+                <input type="file" id="gambar_staffs" name="gambar_staffs" class="form-control @error('gambar_staffs') is-invalid @enderror" value="{{ $data -> gambar_staffs }}" onchange="previewImagess()">
+                @error('gambar_staffs')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Bendahara</label>
                 <input type="text" name = "nama_bendahara" class="form-control @error('nama_bendahara') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> nama_bendahara }}">
                 @error('nama_bendahara')
                 <div class="invalid-feedback">
@@ -114,6 +139,31 @@
                 @endif
                 <input type="file" id="gambar_bendahara" name="gambar_bendahara" class="form-control @error('gambar_bendahara') is-invalid @enderror" value="{{ $data -> gambar_bendahara }}" onchange="previewImageb()">
                 @error('gambar_bendahara')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Staff Bendahara</label>
+                <input type="text" name = "nama_staffb" class="form-control @error('nama_staffb') is-invalid @enderror" id="exampleInputEmail1" value="{{ $data -> nama_staffb }}">
+                @error('nama_staffb')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Gambar Staff Bendahara</label>
+                <input type="hidden" name="oldImagesb" value="{{ $data -> gambar_staffb }}">
+                @if ($data -> gambar_staffb)
+                <img src="{{ asset('storage/'.$data -> gambar_staffb) }}" class="img-previewsb img-fluid mb-3 col-sm-5 d-block">
+                @else
+                <img class="img-previewsb img-fluid mb-3 col-sm-5 ">
+                @endif
+                <input type="file" id="gambar_staffb" name="gambar_staffb" class="form-control @error('gambar_staffb') is-invalid @enderror" value="{{ $data -> gambar_staffb }}" onchange="previewImagesb()">
+                @error('gambar_staffb')
                 <div class="invalid-feedback">
                   {{ $message }}
                 </div>
@@ -248,6 +298,34 @@
       function previewImages(){
         const gambar = document.querySelector('#gambar_sekretaris');
         const imgPreview = document.querySelector('.img-previews');
+
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(gambar.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+          imgPreview.src = oFREvent.target.result;
+        }
+      }
+
+      function previewImagess(){
+        const gambar = document.querySelector('#gambar_staffs');
+        const imgPreview = document.querySelector('.img-previewss');
+
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(gambar.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+          imgPreview.src = oFREvent.target.result;
+        }
+      }
+
+      function previewImagesb(){
+        const gambar = document.querySelector('#gambar_staffb');
+        const imgPreview = document.querySelector('.img-previewsb');
 
         imgPreview.style.display = 'block';
 

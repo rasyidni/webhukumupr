@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class GranddesignController extends Controller
 {
     public function index(){
-        $data = granddesign::all();
+        $data = granddesign::paginate(10);
         return view('admin/grand_design/gdesign', compact('data'));
     }
 

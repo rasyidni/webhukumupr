@@ -32,19 +32,19 @@
                     <th style="width: 10px">No.</th>
                     <th>Gambar</th>
                     <th>Link Google Drive</th>
-                    <th>Tanggal Dibuat</th>
+                    <th>Terakhir Di Update</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($data as $item)
+                  @foreach ($data as $index => $item)
                   <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $index + $data->firstItem() }}</td>
                     <td>
                       <img src="{{ asset('storage/'. $item -> gambar) }}" style="width: 40px">
                     </td>
-                    <td>{{ $item -> link_gdrive }}</td>
-                    <td>{{ $item -> created_at -> format('D M Y') }}</td>
+                    <td>{{ strlen($item -> link_gdrive) > 35 ? substr($item -> link_gdrive,0,35)."..." : $item -> link_gdrive }}</td>
+                    <td>{{ $item -> updated_at ->isoFormat('dddd, D MMMM Y HH:mm.') }}</td>
                     <td>
                       <a href="/deletegdesign/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')"><i class='fa fa-trash'></i></a>
                       <a href="/tampilkangdesign/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
@@ -53,11 +53,13 @@
                   @endforeach
                 </tbody>
               </table>
+              {{ $data->links() }}
             </div>
 
-        </div>
       </div>
+    </div>
   </section>
 </div>
-
+<br>
+<br>
 @endsection

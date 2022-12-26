@@ -29,8 +29,8 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
-                  <div class="card" style="border-radius: 15px;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_ketua) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
@@ -39,8 +39,8 @@
                     </div>
                   </div>
             </div>
-            <div class="col">
-              <div class="card" style="border-radius: 15px;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_wakil) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
@@ -49,8 +49,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-                  <div class="card" style="border-radius: 15px;">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_sekretaris) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
@@ -59,13 +59,36 @@
                     </div>
                   </div>
             </div>
-            <div class="col">
-              <div class="card" style="border-radius: 15px;">
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_bendahara) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
                   <h6 class="mb-2">Bendahara</h6>
                   <p class="text-muted mb-4">{{ $data->nama_bendahara }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3">
+                  <div class="card" style="border-radius: 15px; height: 18rem;">
+                    <div class="card-body text-center">
+                        <img src="{{ asset('storage/'. $data->gambar_staffs) }}"
+                        class="rounded-circle img-fluid" style="width: 200px;" />
+                      <h6 class="mb-2">Staff Sekretaris</h6>
+                      <p class="text-muted mb-4">{{ $data->nama_staffs }}</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="border-radius: 15px; height: 18rem;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_staffb) }}"
+                      class="rounded-circle img-fluid" style="width: 200px;" />
+                  <h6 class="mb-2">Staff Bendahara</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_staffb }}</p>
                 </div>
               </div>
             </div>

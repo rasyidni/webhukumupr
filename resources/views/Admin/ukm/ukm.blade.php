@@ -37,9 +37,9 @@
               </tr>
             </thead>
             <tbody>
-              @foreach ($data as $item)
+              @foreach ($data as $index => $item)
               <tr>
-                <td>{{ $loop->iteration }}</td>
+                <td>{{ $index + $data->firstItem() }}</td>
                 <td>{{ $item -> nama }}</td>
                 <td>
                   <img src="{{ asset('storage/'. $item -> logo) }}" style="width: 100px" class="img-fluid">
@@ -52,9 +52,12 @@
               @endforeach
             </tbody>
           </table>
+          {{ $data->links() }}
         </div>
       </div>
     </div>
   </div>
 </div>
+<br>
+<br>
 @endsection

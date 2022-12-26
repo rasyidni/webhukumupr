@@ -28,9 +28,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_anggota1) }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota1) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">{{ $data->nama_anggota1 }}</span> <span class="card-text">Anggota UPI</span>
+                            <span class="card-title">{{ $data1->nama_anggota1 }}</span> <span class="card-text">Anggota UPI</span>
                         </div>
                     </a>
                 </div>
@@ -38,9 +38,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_kepala) }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_kepala) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">{{ $data->nama_kepala }}</span> <span class="card-text">Kepala UPI</span>
+                            <span class="card-title">{{ $data1->nama_kepala }}</span> <span class="card-text">Kepala UPI</span>
                         </div>
                     </a>
                 </div>
@@ -48,9 +48,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_anggota2) }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota2) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">{{ $data->nama_anggota2 }}</span> <span class="card-text">Anggota UPI</span>
+                            <span class="card-title">{{ $data1->nama_anggota2 }}</span> <span class="card-text">Anggota UPI</span>
                         </div>
                     </a>
                 </div>
@@ -70,7 +70,7 @@
             
         </header>
         <div class="text-justify">
-             {!! $data->penjelasan !!}
+             {!! $data1->penjelasan !!}
         </div>
 
     </div>
@@ -85,7 +85,7 @@
             
         </header>
         <div class="text-justify">
-            {!! $data->proker !!}
+            {!! $data1->proker !!}
         </div>
 </div>
 </div>

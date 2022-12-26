@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class KajianController extends Controller
 {
     public function index(){
-        $data = kajian::all();
+        $data = kajian::paginate(10);
         return view('admin/kajian/kajian', compact('data'));
     }
 

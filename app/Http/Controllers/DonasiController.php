@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DonasiController extends Controller
 {
     public function index(){
-        $data = donasi::all();
+        $data = donasi::paginate(10);
         return view('admin/donasi/donasi', compact('data'));
     }
 

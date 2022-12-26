@@ -33,17 +33,17 @@
                   <th style="width: 10px">No.</th>
                   <th>Nama Donasi</th>
                   <th>Link Google Form</th>
-                  <th>Tanggal Dibuat</th>
+                  <th>Terakhir Di Update</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($data as $item)
+                @foreach ($data as $index => $item)
                 <tr>
-                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $index + $data->firstItem() }}</td>
                   <td>{{ $item -> nama_donasi }}</td>
-                  <td>{{ $item -> link_gform }}</td>
-                  <td>{{ $item -> created_at -> format('l, d M Y H:i') }}</td>
+                  <td>{{ strlen($item -> link_gform) > 35 ? substr($item -> link_gform,0,35)."..." : $item -> link_gform }}</td>
+                  <td>{{ $item -> updated_at ->isoFormat('dddd, D MMMM Y HH:mm.') }}</td>
                   <td>
                     <a href="/deletedonasi/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')"><i class='fa fa-trash'></i></a>
                       <a href="/tampilkandonasi/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
@@ -52,9 +52,12 @@
                 @endforeach
               </tbody>
             </table>
+            {{ $data->links() }}
           </div>
       </div>
     </div>
   </section>
 </div>
+<br>
+<br>
 @endsection

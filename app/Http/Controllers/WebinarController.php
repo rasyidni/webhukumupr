@@ -8,7 +8,7 @@ use App\Models\webinar;
 class WebinarController extends Controller
 {
     public function index(){
-        $data = webinar::all();
+        $data = webinar::paginate(10);
         return view('admin/webinar/webinar', compact('data'));
     }
 

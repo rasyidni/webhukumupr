@@ -30,9 +30,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_menteri) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Menteri</span>
+                            <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri</span>
                         </div>
                     </a>
                 </div>
@@ -46,9 +46,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_dstatistik) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <br> <span class="card-text">Direktur Jenderal Statistik</span>
+                            <span class="card-title">{{ $data1->nama_dstatistik }}</span> <br> <span class="card-text">Direktur Jenderal Statistik</span>
                         </div>
                     </a>
                 </div>
@@ -56,9 +56,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_duak) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Direktur Jenderal Urusan Akademik & Kemahasiswaan</span>
+                            <span class="card-title">{{ $data1->gambar_duak }}</span> <span class="card-text">Direktur Jenderal Urusan Akademik & Kemahasiswaan</span>
                         </div>
                     </a>
                 </div>
@@ -66,9 +66,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_duou) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Direktur Jenderal Urusan Ormawa & UKM</span>
+                            <span class="card-title">{{ $data1->nama_duou }}</span> <span class="card-text">Direktur Jenderal Urusan Ormawa & UKM</span>
                         </div>
                     </a>
                 </div>
@@ -79,9 +79,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'.$data1->gambar_staff1) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Staff Kementerian</span>
+                            <span class="card-title">{{ $data1->nama_staff1 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>
                     </a>
                 </div>
@@ -89,9 +89,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_staff2) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Staff Kementerian</span> 
+                            <span class="card-title">{{ $data1->nama_staff2 }}</span> <span class="card-text">Staff Kementerian</span> 
                         </div>
                     </a>
                 </div>
@@ -104,13 +104,13 @@
 
 <!-- About Us Section Start-->
 <section class="about">
-    <div class="container text-justify" style="padding: 0 15% 0;">
+    <div class="container" style="padding: 0 15% 0;">
         <header class="section-header">
             <h3>Fokus Utama</h3>
         </header>
-        <p>
-             Maecenas vel turpis quis lorem aliquam tempus quis non mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
+        <div class="text-justify">
+             {!! $data->fokus_utama !!}
+        </div>
 
     </div>
 </section>
@@ -118,25 +118,14 @@
 
 <!-- About Us Section Start-->
 <section class="team">
-    <div class="container text-justify" style="padding: 0 15% 0;">
+    <div class="container" style="padding: 0 15% 0;">
         <header class="section-header">
             <h3>Program Kerja</h3>
             
         </header>
-        <p  >
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            list.sort(*, key=None, reverse=False)
-        </p>
+        <div class="text-justify">
+            {!! $data->proker !!}
+       </div>
 </div>
 </div>
 </section>

@@ -52,6 +52,8 @@ Route::get('/tampilanregulasi', [PengunjungController::class, 'regulasi']) -> na
 
 Route::get('/tampilantentangkami', [PengunjungController::class, 'tentangkami']) -> name('tampilantentangkami');
 
+Route::get('/tampilandetailukm', [PengunjungController::class, 'detailukm']) -> name('tampilandetailukm');
+
 Route::get('/tampilanukm', [PengunjungController::class, 'ukm']) -> name('tampilanukm');
 
 Route::get('/tampilanwebinar', [PengunjungController::class, 'webinar']) -> name('tampilanwebinar');

@@ -76,37 +76,33 @@
         <footer class="footer">
             <div class="footer-top">
                 <div class="container">
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
 
-                        <div class="col-md-2 footer-info center-block">
-                        </div>
-
-                        <div class="col footer-info center-block">
+                        <div class="col-md-4 footer-info ">
                             <h3>BEM FH UPR</h3>
                             <p>
-                                Your Location<br>
-                                Your City<br>
+                                Kampus Tunjung Nyaho,<br>
+                                Universitas Palangka Raya,<br>
+                                Kota Palangka Raya, Kalimantan Tengah.<br>
                             </p>
                         </div>
 
-                        <div class="col-md-2 footer-info center-block">
+                        <div class="col-md-3 footer-info">
                         </div>
 
-                        <div class="col footer-contact center-block">
+                        <div class="col-md-4 footer-contact">
                             <h4>Hubungi Kami</h4>
                             <div class="social-links">
                                 <p>
-                                    <strong>Email :</strong> info@example.com<br>
+                                    <strong>Email :</strong> {{ $data->email }}<br>
+                                    <strong>Line :</strong> {{ $data->line }}<br>
                                 </p>
-                                <a href="https://freewebsitecode.com/"><i class="ion-logo-twitter"></i></a>
-                                <a href="https://facebook.com/freewebsitecode/"><i class="ion-logo-facebook"></i></a>
-                                <a href="https://freewebsitecode.com/"><i class="ion-logo-instagram"></i></a>
-                                <a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos"><i class="ion-logo-youtube"></i></a>
+                                <a href="{{ $data->twitter }}"><i class="ion-logo-twitter"></i></a>
+                                <a href="{{ $data->fb }}"><i class="ion-logo-facebook"></i></a>
+                                <a href="{{ $data->ig }}"><i class="ion-logo-instagram"></i></a>
+                                <a href="{{ $data->youtube }}"><i class="ion-logo-youtube"></i></a>
                             </div>
 
-                        </div>
-
-                        <div class="col-md-2 footer-info center-block">
                         </div>
 
                     </div>

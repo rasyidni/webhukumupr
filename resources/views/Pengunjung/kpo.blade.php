@@ -28,9 +28,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Menteri</span>
+                            <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri</span>
                         </div>
                     </a>
                 </div>
@@ -42,9 +42,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dolahraga) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Direktur Jenderal Keolahragaan</span>
+                            <span class="card-title">{{ $data1->nama_dolahraga }}</span> <span class="card-text">Direktur Jenderal Keolahragaan</span>
                         </div>
                     </a>
                 </div>
@@ -52,9 +52,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dpemuda) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Direktur Jenderal Kepemudaan</span>
+                            <span class="card-title">{{ $data1->nama_dpemuda }}</span> <span class="card-text">Direktur Jenderal Kepemudaan</span>
                         </div>
                     </a>
                 </div>
@@ -62,9 +62,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dso) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Direktur Jenderal Seni & Olahraga</span>
+                            <span class="card-title">{{ $data1->nama_dso }}</span> <span class="card-text">Direktur Jenderal Seni & Olahraga</span>
                         </div>
                     </a>
                 </div>
@@ -76,9 +76,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff1) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">Ava M. Proctor</span> <span class="card-text">Staff Kementerian</span>
+                            <span class="card-title">{{ $data1->nama_staff1 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>
                     </a>
                 </div>
@@ -86,9 +86,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff2) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">Ava M. Proctor</span> <span class="card-text">Staff Kementerian</span>
+                            <span class="card-title">{{ $data1->nama_staff2 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>
                     </a>
                 </div>
@@ -105,9 +105,9 @@
             <h3>Fokus Utama</h3>
             
         </header>
-        <p class="text-justify">
-             Maecenas vel turpis quis lorem aliquam tempus quis non mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
+        <div class="text-justify">
+             {!! $data1->fokus_utama !!}
+        </div>
 
     </div>
 </section>
@@ -120,20 +120,9 @@
             <h3>Program Kerja</h3>
             
         </header>
-        <p  >
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            list.sort(*, key=None, reverse=False)
-        </p>
+        <div class="text-justify">
+            {!! $data1->proker !!}
+       </div>
 </div>
 </div>
 </section>

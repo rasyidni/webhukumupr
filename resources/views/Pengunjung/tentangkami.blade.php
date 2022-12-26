@@ -28,9 +28,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/' .$data->gambar_ketua) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Presma</span>
+                            <span class="card-title">{{ $data->nama_ketua }}</span> <span class="card-text">Presma</span>
                         </div>
                     </a>
                 </div>
@@ -38,9 +38,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_wakil) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Wakil Presma</span>
+                            <span class="card-title">{{ $data->nama_wakil }}</span> <span class="card-text">Wakil Presma</span>
                         </div>
                     </a>
                 </div>
@@ -50,9 +50,9 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_sekretaris) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">John P. Haight</span> <span class="card-text">Sekretaris</span>
+                            <span class="card-title">{{ $data->nama_sekretaris }}</span> <span class="card-text">Sekretaris</span>
                         </div>
                     </a>
                 </div>
@@ -60,9 +60,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'.$data->gambar_staffs) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">David R. Bernard</span> <span class="card-text">Staff Sekretaris</span>
+                            <span class="card-title">{{ $data->nama_staffs }}</span> <span class="card-text">Staff Sekretaris</span>
                         </div>
                     </a>
                 </div>
@@ -70,9 +70,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_bendahara) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">Dana A. Thomas</span> <span class="card-text">Bendahara</span>
+                            <span class="card-title">{{ $data->nama_bendahara }}</span> <span class="card-text">Bendahara</span>
                         </div>
                     </a>
                 </div>
@@ -80,9 +80,9 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('foto.jpeg') }}">
+                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/' . $data->gambar_staffb) }}">
                         <div class="card-title-wrap">
-                            <span class="card-title">Ava M. Proctor</span> <span class="card-text">Staff Bendahara</span>
+                            <span class="card-title">{{ $data->nama_staffb }}</span> <span class="card-text">Staff Bendahara</span>
                         </div>
                     </a>
                 </div>
@@ -99,9 +99,9 @@
             <h3>Visi</h3>
             
         </header>
-        <p class="text-justify">
-             Maecenas vel turpis quis lorem aliquam tempus quis non mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
+        <div class="text-justify">
+             {!! $data->visi !!}
+        </div>
 
     </div>
 </section>
@@ -109,25 +109,13 @@
 
 <!-- About Us Section Start-->
 <section class="team">
-    <div class="container text-justify" style="padding: 0 15% 0;">
+    <div class="container" style="padding: 0 15% 0;">
         <header class="section-header">
             <h3>Misi</h3>
-            
         </header>
-        <p  >
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            Kembalikan berapa kali x muncul dalam daftar.
-            list.sort(*, key=None, reverse=False)
-        </p>
-        <p>
-            list.count(x)
-            list.sort(*, key=None, reverse=False)
-        </p>
+        <div class="text-justify">
+            {!! $data->misi !!}
+        </div>
 </div>
 </div>
 </section>

@@ -27,10 +27,14 @@ class TentangkamiController extends Controller
             'nama_wakil' => 'required|max:200',
             'nama_sekretaris' => 'required|max:200',
             'nama_bendahara' => 'required|max:200',
+            'nama_staffs' => 'required|max:200',
+            'nama_staffb' => 'required|max:200',
             'gambar_ketua' => 'image',
             'gambar_wakil' => 'image',
             'gambar_sekretaris' => 'image',
             'gambar_bendahara' => 'image',
+            'gambar_staffs' => 'image',
+            'gambar_staffb' => 'image',
             'visi' => 'required',
             'misi' => 'required',
             'email' => 'required',
@@ -77,6 +81,24 @@ class TentangkamiController extends Controller
             }
             
             $validatedData['gambar_bendahara'] = $request->file('gambar_bendahara')->store('tentangkami');
+        }
+
+        if($request->file('gambar_staffs')){
+
+            if($request->oldImagess) {
+                Storage::delete($request->oldImagess);
+            }
+            
+            $validatedData['gambar_staffs'] = $request->file('gambar_staffs')->store('tentangkami');
+        }
+
+        if($request->file('gambar_staffb')){
+
+            if($request->oldImagesb) {
+                Storage::delete($request->oldImagesb);
+            }
+            
+            $validatedData['gambar_staffb'] = $request->file('gambar_staffb')->store('tentangkami');
         }
             
         $data->update($validatedData);

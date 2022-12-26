@@ -33,19 +33,19 @@
                 <th style="width: 10px">No.</th>
                 <th>Judul Berita</th>
                 <th>Gambar</th>
-                <th>Terakhir di update</th>
+                <th>Terakhir di Update</th>
                 <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($data as $item)
+              @foreach ($data as $index => $item)
               <tr>
-                <td>{{ $loop->iteration }}</td>
+                <td>{{ $index + $data->firstItem() }}</td>
                 <td>{{ $item -> judul }}</td>
                 <td>
                   <img src="{{ asset('storage/'. $item -> gambar) }}" style="width: 120px" class="img-fluid">
                 </td>
-                <td>{{ $item -> updated_at -> format('l, d M Y H:i') }}</td>
+                <td>{{ $item -> updated_at ->isoFormat('dddd, D MMMM Y HH:mm.') }}</td>
                 <td>
                   <a href="/deleteberita/{{ $item -> id }}" type="button" class="btn btn-danger" style="width: 80px" onclick="return confirm('Anda yakin untuk menghapusnya?')"><i class='fa fa-trash'></i></a>
                   <a href="/tampilkanberita/{{ $item -> id }}" type="button" class="btn btn-info" style="width: 80px "><i class='fa fa-edit'></i></a>
@@ -54,9 +54,12 @@
               @endforeach
             </tbody>
           </table>
+          {{ $data->links() }}
         </div>
       </div>
     </div>
   </div>
 </div>
+<br>
+<br>
 @endsection
