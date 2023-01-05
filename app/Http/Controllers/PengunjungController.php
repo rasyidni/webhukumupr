@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\donasi;
+use App\Models\kajian;
+use App\Models\granddesign;
+use App\Models\webinar;
 use Illuminate\Http\Request;
 use App\Models\tentangkami;
 use App\Models\kagama;
@@ -16,6 +20,9 @@ use App\Models\kperempuan;
 use App\Models\ksdm;
 use App\Models\ksekretariat;
 use App\Models\kwirausaha;
+use App\Models\News;
+use App\Models\regulasi;
+use App\Models\ukm;
 use App\Models\unitpenerangan;
 
 class PengunjungController extends Controller
@@ -32,37 +39,63 @@ class PengunjungController extends Controller
 
     public function berita(){
         $data = tentangkami::find(1);
-        return view('pengunjung/berita', compact('data'));
-    }
-
-    public function donasi(){
-        $data = tentangkami::find(1);
-        return view('pengunjung/donasi', compact('data'));
-    }
-
-    public function granddesign(){
-        $data = tentangkami::find(1);
-        return view('pengunjung/granddesign', compact('data'));
+        $data1 = News::latest()->paginate(6);
+        return view('pengunjung/berita', compact('data', 'data1'));
     }
 
     public function kajian(){
         $data = tentangkami::find(1);
-        return view('pengunjung/kajian', compact('data'));
+        $data1 = kajian::paginate(6);
+        return view('pengunjung/kajian', compact('data', 'data1'));
     }
 
-    public function regulasi(){
+    public function donasi(){
         $data = tentangkami::find(1);
-        return view('pengunjung/regulasi', compact('data'));
+        $data1 = donasi::paginate(9);
+        return view('pengunjung/donasi', compact('data', 'data1'));
     }
 
-    public function ukm(){
+    public function detaildonasi($id){
         $data = tentangkami::find(1);
-        return view('pengunjung/ukm', compact('data'));
+        $data1 = donasi::find($id);
+        return view('pengunjung/detaildonasi', compact('data', 'data1'));
     }
 
     public function webinar(){
         $data = tentangkami::find(1);
-        return view('pengunjung/webinar', compact('data'));
+        $data1 = webinar::paginate(9);
+        return view('pengunjung/webinar', compact('data', 'data1'));
+    }
+
+    public function detailwebinar($id){
+        $data = tentangkami::find(1);
+        $data1 = webinar::find($id);
+        return view('pengunjung/detailwebinar', compact('data', 'data1'));
+    }
+
+
+    public function granddesign(){
+        $data = tentangkami::find(1);
+        $data1 = granddesign::paginate(9);
+        return view('pengunjung/granddesign', compact('data', 'data1'));
+    }
+
+    public function regulasi(){
+        $data = tentangkami::find(1);
+        $data1 = regulasi::paginate(9);
+        return view('pengunjung/regulasi', compact('data', 'data1'));
+    }
+
+    public function ukm(){
+        $data = tentangkami::find(1);
+        $data1 = ukm::paginate(8);
+        return view('pengunjung/ukm', compact('data', 'data1'));
+    }
+
+    public function detailukm($id){
+        $data = tentangkami::find(1);
+        $data1 = ukm::find($id);
+        return view('pengunjung/detailukm', compact('data', 'data1'));
     }
 
     public function ka(){

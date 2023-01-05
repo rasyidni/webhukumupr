@@ -77,7 +77,7 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Link Whatsapp</label>
+                <label for="exampleInputEmail1" class="form-label">No Whatsapp</label>
                 <input type="text" name = "wa" class="form-control @error('wa') is-invalid @enderror" id="exampleInputEmail1" required>
                 @error('wa')
                 <div class="invalid-feedback">

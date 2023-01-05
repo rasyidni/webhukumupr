@@ -8,7 +8,7 @@ use App\Models\regulasi;
 class RegulasiController extends Controller
 {
     public function index(){
-        $data = regulasi::paginate(10);
+        $data = regulasi::latest()->paginate(10);
         return view('admin/regulasi/regulasi', compact('data'));
     }
 

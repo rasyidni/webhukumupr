@@ -41,7 +41,7 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Isi Kajian</label>
+                <label for="exampleInputEmail1" class="form-label">Abstrak Kajian</label>
                 <textarea class="form-control @error('isi') is-invalid @enderror" id="editor" name = "isi" rows="3" placeholder="Masukkan Isi Kajian"></textarea>
                 @error('isi')
                 <div class="invalid-feedback">

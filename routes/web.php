@@ -44,6 +44,12 @@ Route::get('/tampilanberita', [PengunjungController::class, 'berita']) -> name('
 
 Route::get('/tampilandonasi', [PengunjungController::class, 'donasi']) -> name('tampilandonasi');
 
+Route::get('/tampilandetaildonasi/{id}', [PengunjungController::class, 'detaildonasi']) -> name('tampilandetaildonasi');
+
+Route::get('/tampilanwebinar', [PengunjungController::class, 'webinar']) -> name('tampilanwebinar');
+
+Route::get('/tampilandetailwebinar/{id}', [PengunjungController::class, 'detailwebinar']) -> name('tampilandetailwebinar');
+
 Route::get('/tampilangranddesign', [PengunjungController::class, 'granddesign']) -> name('tampilangranddesign');
 
 Route::get('/tampilankajian', [PengunjungController::class, 'kajian']) -> name('tampilankajian');
@@ -52,11 +58,9 @@ Route::get('/tampilanregulasi', [PengunjungController::class, 'regulasi']) -> na
 
 Route::get('/tampilantentangkami', [PengunjungController::class, 'tentangkami']) -> name('tampilantentangkami');
 
-Route::get('/tampilandetailukm', [PengunjungController::class, 'detailukm']) -> name('tampilandetailukm');
+Route::get('/tampilandetailukm/{id}', [PengunjungController::class, 'detailukm']) -> name('tampilandetailukm');
 
 Route::get('/tampilanukm', [PengunjungController::class, 'ukm']) -> name('tampilanukm');
-
-Route::get('/tampilanwebinar', [PengunjungController::class, 'webinar']) -> name('tampilanwebinar');
 
 Route::get('/tampilanka', [PengunjungController::class, 'ka']) -> name('tampilanka');
 

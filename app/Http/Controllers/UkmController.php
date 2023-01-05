@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class UkmController extends Controller
 {
     public function index(){
-        $data = ukm::paginate(10);
+        $data = ukm::latest()->paginate(10);
         return view('admin/ukm/ukm', compact('data'));
     }
 

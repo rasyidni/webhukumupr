@@ -24,54 +24,21 @@
                     <h3>Unit Kegiatan Mahasiswa</h3>
                 </header>
                 <div class="row">
+                    @foreach ($data1 as $item)
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">Web Design</a></h4>
+                            <img src="{{ asset('storage/'. $item -> logo) }}" width="45%">
+                            </br>
+                            </br>
+                            <h4><a href="/tampilandetailukm/{{ $item -> id }}">{{ $item -> nama }}</a></h4>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">Web Development</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">App Design</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">App Development</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">Web Design</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">Web Development</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">App Design</a></h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-service">
-                            <img src="{{ asset('logofhupr.png') }}" width="45%">
-                            <h4><a href="">App Development</a></h4>
-                        </div>
-                    </div>
+                    @endforeach
+                </div>
+                </br>
+                </br>
+                <div class="pagination">
+                {{ $data1->links() }}
                 </div>
             </div>
         </section>

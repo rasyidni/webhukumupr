@@ -54,7 +54,10 @@
               @endforeach
             </tbody>
           </table>
-          {{ $data->links() }}
+          </br>
+          <div style="padding: 0 15px 0;">
+            {{ $data->links() }}
+          </div>
         </div>
       </div>
     </div>
