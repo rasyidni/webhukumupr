@@ -9,8 +9,8 @@
             <div class="banner-nav">
                 <div class="banner-box">
                     
-                    <a href="#">Halaman </a>
-                    <a href="#">Kementerian Pengembangan Sumber Daya Mahasiswa</a>
+                    <a>Halaman </a>
+                    <a>Kementerian Pengembangan Sumber Daya Mahasiswa</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri</span>
                         </div>
@@ -44,9 +44,9 @@
 
         <div class="row d-flex justify-content-center">
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dhukum) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dhukum) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dhukum }}</span><span class="card-text">Direktur Jenderal Pendidikan & Profesi Hukum</span>
                         </div>
@@ -54,9 +54,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dinovasi) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dinovasi) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dinovasi }}</span> <span class="card-text">Direktur Jenderal Pengembangan, Riset, dan Inovasi</span>
                         </div>
@@ -64,9 +64,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dpelatihan) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dpelatihan) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dpelatihan }}</span> <span class="card-text">Direktur Jenderal Manajemen Pelatihan</span>
                         </div>
@@ -74,9 +74,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>

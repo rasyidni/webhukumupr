@@ -25,38 +25,39 @@
             <h3 class="section-title">Unit Penerangan Internal</h3>
         </header>
         <br>
+
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota1) }}">
-                        <div class="card-title-wrap">
-                            <span class="card-title">{{ $data1->nama_anggota1 }}</span> <span class="card-text">Anggota UPI</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_kepala) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_kepala) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_kepala }}</span> <span class="card-text">Kepala UPI</span>
                         </div>
                     </a>
                 </div>
             </div>
-
-            <div class="col-md-3 col-sm-6">
+        </div>
+    <br/>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota2) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota1) }}">
+                        <div class="card-title-wrap">
+                            <span class="card-title">{{ $data1->nama_anggota1 }}</span> <span class="card-text">Anggota UPI</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+                <div class="card card-block">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1->gambar_anggota2) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_anggota2 }}</span> <span class="card-text">Anggota UPI</span>
                         </div>
                     </a>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </section>

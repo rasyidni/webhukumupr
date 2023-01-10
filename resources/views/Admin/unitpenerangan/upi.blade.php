@@ -29,33 +29,41 @@
           @endif
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col">
+            <div class="col-md-3">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_kepala) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                        <br>
+                        <br>
                       <h6 class="mb-2">Kepala UPI</h6>
                       <p class="text-muted mb-4">{{ $data->nama_kepala }}</p>
                     </div>
                   </div>
             </div>
+          </div>
 
-            <div class="col">
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3" style="margin: 0 20px;">
               <div class="card" style="border-radius: 15px; height: 20rem;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_anggota1) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
+                      <br>
+                      <br>
                   <h6 class="mb-2">Anggota UPI</h6>
                   <p class="text-muted mb-4">{{ $data->nama_anggota1 }}</p>
                 </div>
               </div>
             </div>
             
-            <div class="col">
+            <div class="col-md-3" style="margin: 0 20px;">
                   <div class="card" style="border-radius: 15px; height: 20rem;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_anggota2) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                        <br>
+                        <br>
                       <h6 class="mb-2">Anggota UPI</h6>
                       <p class="text-muted mb-4">{{ $data->nama_anggota2 }}</p>
                     </div>
@@ -64,16 +72,20 @@
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Keterangan</h5>
-              {!! $data->penjelasan !!}
+              <div class="text-justify">
+                {!! $data->penjelasan !!}
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col text-center">
+            <div class="col-10 text-center">
               <h5 class="mb-2">Fokus Utama</h5>
-              {!! $data->proker !!}
+              <div class="text-justify">
+                {!! $data->proker !!}
+              </div>
             </div>
           </div>
 

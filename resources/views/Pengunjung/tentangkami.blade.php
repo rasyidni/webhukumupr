@@ -26,9 +26,9 @@
         </header>
         <br>
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/' .$data->gambar_ketua) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/' .$data->gambar_ketua) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data->nama_ketua }}</span> <span class="card-text">Presma</span>
                         </div>
@@ -36,9 +36,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_wakil) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_wakil) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data->nama_wakil }}</span> <span class="card-text">Wakil Presma</span>
                         </div>
@@ -46,11 +46,11 @@
                 </div>
             </div>
         </div>
-    </br>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
+        <br/>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_sekretaris) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_sekretaris) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data->nama_sekretaris }}</span> <span class="card-text">Sekretaris</span>
                         </div>
@@ -58,9 +58,21 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'.$data->gambar_staffs) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_bendahara) }}">
+                        <div class="card-title-wrap">
+                            <span class="card-title">{{ $data->nama_bendahara }}</span> <span class="card-text">Bendahara</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+                <div class="card card-block">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'.$data->gambar_staffs) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data->nama_staffs }}</span> <span class="card-text">Staff Sekretaris</span>
                         </div>
@@ -68,19 +80,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data->gambar_bendahara) }}">
-                        <div class="card-title-wrap">
-                            <span class="card-title">{{ $data->nama_bendahara }}</span> <span class="card-text">Bendahara</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/' . $data->gambar_staffb) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/' . $data->gambar_staffb) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data->nama_staffb }}</span> <span class="card-text">Staff Bendahara</span>
                         </div>

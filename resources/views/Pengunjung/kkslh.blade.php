@@ -30,7 +30,7 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri Koordinator</span>
                         </div>
@@ -38,11 +38,34 @@
                 </div>
             </div>
         </div>
-    </br>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
+    <br/>
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff1) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dsosial) }}">
+                        <div class="card-title-wrap">
+                            <span class="card-title">{{ $data1->nama_dsosial }}</span> <span class="card-text">Direktur Jenderal Sosial</span> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+                <div class="card card-block">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dlingkungan) }}">
+                        <div class="card-title-wrap">
+                            <span class="card-title">{{ $data1->nama_dlingkungan }}</span> <span class="card-text">Direktur Jenderal Lingkungan Hidup & Tata Ruang</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+                <div class="card card-block">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff1) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff1 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>
@@ -50,29 +73,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dsosial) }}">
-                        <div class="card-title-wrap">
-                            <span class="card-title">{{ $data1->nama_dsosial }}</span> </br> <span class="card-text">Direktur Jenderal Sosial</span> 
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dlingkungan) }}">
-                        <div class="card-title-wrap">
-                            <span class="card-title">{{ $data1->nama_dlingkungan }}</span> <span class="card-text">Direktur Jenderal Lingkungan Hidup & Tata Ruang</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff2) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff2) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff2 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>

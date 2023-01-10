@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Administrator </title>
+  <title>Administrator</title>
   <link rel="icon" href="{{ asset('logofhupr.png') }}" type="image/icon type">
 
   <!-- Font Awesome -->
@@ -52,7 +52,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{ asset('logofhupr.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+           style="opacity: .8;">
       <span class="brand-text font-weight-light">Administrator</span>
     </a>
 

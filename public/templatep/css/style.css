@@ -1,7 +1,7 @@
 /* ------------------ General CSS ------------------ */
 body {
     color: #656565;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: #ffffff;
 }
 
@@ -81,7 +81,7 @@ h6 {
 .header.header-scrolled {
     background: rgba(0, 0, 0, 0.9);
     padding: 0 0;
-    height: 92px;
+    height: 83.5px;
     transition: all 0.3s;
 }
 
@@ -663,7 +663,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ---------------- Services Style ----------------- */
 .services {
     background: #ffffff;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 0 0;
     text-align: center;
 }
 

@@ -31,10 +31,10 @@
                     <div class="img">
                         <img src="{{ asset('storage/' . $item -> gambar) }}" alt="gambar" class="img-fluid">
                     </div>
-                    <h2 class="title"><a href="#">{{ $item ->  judul}}</a></h2>
+                    <h2 class="title"><a href="/tampilandetailberita/{{ $item->id }}">{{ $item ->  judul}}</a></h2>
                         {!! Str::limit($item -> isi, 100) !!}
                     <div class="read-more">
-                        <a href="#">Read More</a>
+                        <a href="/tampilandetailberita/{{ $item->id }}">Read More</a>
                     </div>
                 </div>
             </div>

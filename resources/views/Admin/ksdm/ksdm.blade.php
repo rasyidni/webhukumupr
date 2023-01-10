@@ -31,10 +31,12 @@
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_menteri) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Menteri</h6>
                   <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                 </div>
@@ -45,10 +47,12 @@
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
 
             <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_dhukum) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
+                      <br>
+                      <br>
                   <h6 class="mb-2">Direktur Jenderal Pendidikan & Profesi Hukum</h6>
                   <p class="text-muted mb-4">{{ $data->nama_dhukum }}</p>
                 </div>
@@ -56,30 +60,36 @@
             </div>
             
             <div class="col-md-3">
-                  <div class="card" style="border-radius: 15px; height: 20rem;">
+                  <div class="card" style="border-radius: 15px;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_dinovasi) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                        <br>
+                        <br>
                       <h6 class="mb-2">Direktur Jenderal Pengembangan, Riset, Dan Inovasi</h6>
                       <p class="text-muted mb-4">{{ $data->nama_dinovasi }}</p>
                     </div>
                   </div>
             </div>
             <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/' .$data->gambar_dpelatihan) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Direktur Jenderal Manajemen Pelatihan</h6>
                   <p class="text-muted mb-4">{{ $data->nama_dpelatihan }}</p>
                 </div>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 20rem;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/' .$data->gambar_staff) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Staff Kementerian</h6>
                   <p class="text-muted mb-4">{{ $data->nama_staff }}</p>
                 </div>

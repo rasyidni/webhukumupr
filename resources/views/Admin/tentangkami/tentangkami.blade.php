@@ -30,20 +30,20 @@
               {{ Session::forget('sukses') }}
           @endif
         <div class="card-body p-5">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-3">
-                  <div class="card h-100" style="border-radius: 15px;">
-                    <div class="card-body text-center">
-                        <img src="{{ asset('storage/'. $data->gambar_ketua) }}"
-                        class="rounded-circle img-fluid" style="width: 200px;" />
-                      </br>
-                    </br>
-                      <h6 class="mb-2">Presma</h6>
-                      <p class="text-muted mb-4">{{ $data->nama_ketua }}</p>
-                    </div>
-                  </div>
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
+              <div class="card h-100" style="border-radius: 15px;">
+                <div class="card-body text-center">
+                    <img src="{{ asset('storage/'. $data->gambar_ketua) }}"
+                    class="rounded-circle img-fluid" style="width: 200px;" />
+                  <br>
+                  <br>
+                  <h6 class="mb-2">Presma</h6>
+                  <p class="text-muted mb-4">{{ $data->nama_ketua }}</p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
               <div class="card h-100" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_wakil) }}"
@@ -55,7 +55,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+          </div>
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
                   <div class="card h-100" style="border-radius: 15px;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_sekretaris) }}"
@@ -67,7 +69,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
               <div class="card h-100" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_bendahara) }}"
@@ -81,8 +83,8 @@
             </div>
           </div>
 
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-3">
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
                   <div class="card h-100" style="border-radius: 15px;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_staffs) }}"
@@ -94,7 +96,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin: 0px 20px;">
               <div class="card h-100" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_staffb) }}"

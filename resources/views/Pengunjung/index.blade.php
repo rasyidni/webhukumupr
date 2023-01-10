@@ -14,14 +14,29 @@
 
                         <div class="carousel-item active">
                             <div class="carousel-background"><img src="{{ asset('slider2.jpg') }}" alt=""></div>
+                            <div class="carousel-container">
+                                <div class="carousel-content">
+                                    <h2>Selamat Datang di <br/>Website BEM Fakultas Hukum <br/>Universitas Palangka Raya</h2>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="carousel-item">
                             <div class="carousel-background"><img src="{{ asset('slider1.jpg') }}" alt=""></div>
+                            <div class="carousel-container">
+                                <div class="carousel-content">
+                                    <h2>Selamat Datang di <br/>Website BEM Fakultas Hukum <br/>Universitas Palangka Raya</h2>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="carousel-item">
                             <div class="carousel-background"><img src="{{ asset('slider3.jpg') }}" alt=""></div>
+                            <div class="carousel-container">
+                                <div class="carousel-content">
+                                    <h2>Selamat Datang di <br/>Website BEM Fakultas Hukum <br/>Universitas Palangka Raya</h2>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -42,67 +57,59 @@
         <!-- Slider Section End-->
 
         <!-- About Us Section Start-->
-        <section class="about">
-            <div class="container">
-                <header class="section-header">
-                    <h3>About Us</h3>
-                    <p>
-                        Maecenas vel turpis quis lorem aliquam tempus quis non mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </p>
-                </header>
+<section class="about">
+    <div class="container">
+        <header class="section-header">
+            <h3>Berita Terbaru</h3>
+        </header>
 
-                <div class="row about-cols">
-                    <div class="col-md-4">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-disc"></i></div>
-                            </div>
-                            <h2 class="title"><a href="#">Our Mission</a></h2>
-                            <p>
-                                Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
-                            </p>
-                            <div class="read-more">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
+        <div class="row about-cols">
+            @foreach($berita as $item)
+            <div class="col-md-4" style="margin-bottom: 40px;">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{ asset('storage/' . $item -> gambar) }}" alt="gambar" class="img-fluid">
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/about-vision.jpg" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-eye"></i></div>
-                            </div>
-                            <h2 class="title"><a href="#">Our Vision</a></h2>
-                            <p>
-                                Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
-                            </p>
-                            <div class="read-more">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/about-objective.jpg" alt="" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-options"></i></div>
-                            </div>
-                            <h2 class="title"><a href="#">Our Objective</a></h2>
-                            <p>
-                                Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
-                            </p>
-                            <div class="read-more">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
+                    <h2 class="title"><a href="/tampilandetailberita/{{ $item->id }}">{{ $item ->  judul}}</a></h2>
+                        {!! Str::limit($item -> isi, 100) !!}
+                    <div class="read-more">
+                        <a href="/tampilandetailberita/{{ $item->id }}">Read More</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- About Us Section End -->
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- About Us Section End -->
+
+<!-- About Us Section Start-->
+<section class="about">
+    <div class="container">
+        <header class="section-header">
+            <h3>Kajian Terbaru</h3>
+        </header>
+
+        <div class="row about-cols">
+            @foreach($kajian as $item)
+            <div class="col-md-4" style="margin-bottom: 40px;">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{ asset('storage/' . $item -> gambar) }}" alt="gambar" class="img-fluid">
+                    </div>
+                    <h2 class="title"><a href="/tampilandetailkajian/{{ $item -> id }}">{{ $item ->  judul}}</a></h2>
+                        {!! Str::limit($item -> isi, 100) !!}
+                    <div class="read-more">
+                        <a href="/tampilandetailkajian/{{ $item -> id }}">Read More</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- About Us Section End -->
+
 @endsection
 
         

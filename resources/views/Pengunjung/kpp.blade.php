@@ -8,8 +8,8 @@
         <div class="col-lg-12">
             <div class="banner-nav">
                 <div class="banner-box">
-                    <a href="#">Halaman </a>
-                    <a href="#">Kementerian Pemberdayaan Perempuan</a>
+                    <a>Halaman </a>
+                    <a>Kementerian Pemberdayaan Perempuan</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri</span>
                         </div>
@@ -38,27 +38,27 @@
         </div>
         <br>
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dkip) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dkip) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dkip }}</span> <span class="card-text">Direktur Jenderal Kajian Isu Perempuan</span>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dpp) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dpp) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dpp }}</span> <span class="card-text">Direktur Jenderal Perlindungan Perempuan</span>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>

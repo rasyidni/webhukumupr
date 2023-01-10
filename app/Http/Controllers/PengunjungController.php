@@ -29,7 +29,9 @@ class PengunjungController extends Controller
 {
     public function index(){
         $data = tentangkami::find(1);
-        return view('pengunjung/index', compact('data'));
+        $berita = News::orderByDesc('created_at')->take(3)->get();
+        $kajian = kajian::orderByDesc('created_at')->take(3)->get();
+        return view('pengunjung/index', compact('data', 'berita', 'kajian'));
     }
 
     public function tentangkami(){
@@ -43,15 +45,27 @@ class PengunjungController extends Controller
         return view('pengunjung/berita', compact('data', 'data1'));
     }
 
+    public function detailberita($id){
+        $data = tentangkami::find(1);
+        $data1 = News::find($id);
+        return view('pengunjung/detailberita', compact('data', 'data1'));
+    }
+
     public function kajian(){
         $data = tentangkami::find(1);
-        $data1 = kajian::paginate(6);
+        $data1 = kajian::latest()->paginate(6);
         return view('pengunjung/kajian', compact('data', 'data1'));
+    }
+
+    public function detailkajian($id){
+        $data = tentangkami::find(1);
+        $data1 = kajian::find($id);
+        return view('pengunjung/detailkajian', compact('data', 'data1'));
     }
 
     public function donasi(){
         $data = tentangkami::find(1);
-        $data1 = donasi::paginate(9);
+        $data1 = donasi::latest()->paginate(9);
         return view('pengunjung/donasi', compact('data', 'data1'));
     }
 
@@ -63,7 +77,7 @@ class PengunjungController extends Controller
 
     public function webinar(){
         $data = tentangkami::find(1);
-        $data1 = webinar::paginate(9);
+        $data1 = webinar::latest()->paginate(9);
         return view('pengunjung/webinar', compact('data', 'data1'));
     }
 
@@ -76,13 +90,13 @@ class PengunjungController extends Controller
 
     public function granddesign(){
         $data = tentangkami::find(1);
-        $data1 = granddesign::paginate(9);
+        $data1 = granddesign::latest()->paginate(9);
         return view('pengunjung/granddesign', compact('data', 'data1'));
     }
 
     public function regulasi(){
         $data = tentangkami::find(1);
-        $data1 = regulasi::paginate(9);
+        $data1 = regulasi::latest()->paginate(9);
         return view('pengunjung/regulasi', compact('data', 'data1'));
     }
 

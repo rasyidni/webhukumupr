@@ -19,7 +19,7 @@
 
         <!-- Contact Section Start -->
         <section class="service">
-            <div class="container" style="padding: 3.5% 12% 3.5%;">
+            <div class="container" style="padding: 3.5% 3.5% 3.5%;">
                 <header class="section-header">
                     <h3>{{ $data1 -> nama_donasi }}</h3>
                 </header>

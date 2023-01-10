@@ -30,32 +30,40 @@
         <div class="card-body p-5">
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
             <div class="col-md-3">
-                  <div class="card" style="border-radius: 15px; height: 17rem;">
+                  <div class="card" style="border-radius: 15px;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_menteri) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                        <br>
+                        <br>
                       <h6 class="mb-2">Menteri</h6>
                       <p class="text-muted mb-4">{{ $data->nama_menteri }}</p>
                     </div>
                   </div>
             </div>
+          </div>
 
-            <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 17rem;">
+          <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
+            <div class="col-md-3" style="margin: 0 20px;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_dks) }}"
                       class="rounded-circle img-fluid" style="width: 200px;" />
+                      <br>
+                      <br>
                   <h6 class="mb-2">Direktur Jenderal Kajian Strategis</h6>
                   <p class="text-muted mb-4">{{ $data->nama_dks }}</p>
                 </div>
               </div>
             </div>
             
-            <div class="col-md-3">
-                  <div class="card" style="border-radius: 15px; height: 17rem;">
+            <div class="col-md-3" style="margin: 0 20px;">
+                  <div class="card" style="border-radius: 15px;">
                     <div class="card-body text-center">
                         <img src="{{ asset('storage/'. $data->gambar_da) }}"
                         class="rounded-circle img-fluid" style="width: 200px;" />
+                        <br>
+                        <br>
                       <h6 class="mb-2">Direktur Jenderal Advokasi</h6>
                       <p class="text-muted mb-4">{{ $data->nama_da }}</p>
                     </div>
@@ -64,31 +72,37 @@
           </div>
 
           <div class="row d-flex justify-content-center align-items-center h-100 gx-5 p-3">
-            <div class="col-md-3">
-              <div class="card" style="border-radius: 15px;  height: 17rem;">
+            <div class="col-md-3" style="margin: 0 20px;">
+              <div class="card" style="border-radius: 15px; ">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data->gambar_kkajian) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Kepala Pusat Kajian Kebijakan Regional & Nasional</h6>
                   <p class="text-muted mb-4">{{ $data->nama_kkajian }}</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 17rem;">
+            <div class="col-md-3" style="margin: 0 20px;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data -> gambar_kaksi) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Kepala Badan Aksi & Propaganda</h6>
                   <p class="text-muted mb-4">{{ $data->nama_kaksi }}</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card" style="border-radius: 15px; height: 17rem;">
+            <div class="col-md-3" style="margin: 0 20px;">
+              <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                     <img src="{{ asset('storage/'. $data -> gambar_staff) }}"
                     class="rounded-circle img-fluid" style="width: 200px;" />
+                    <br>
+                    <br>
                   <h6 class="mb-2">Staff Kementerian</h6>
                   <p class="text-muted mb-4">{{ $data->nama_staff }}</p>
                 </div>

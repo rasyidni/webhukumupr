@@ -9,8 +9,8 @@
             <div class="banner-nav">
                 <div class="banner-box">
                     
-                    <a href="#">Halaman </a>
-                    <a href="#">Kementerian Dalam Negeri</a>
+                    <a>Halaman </a>
+                    <a>Kementerian Dalam Negeri</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_menteri) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_menteri }}</span> <span class="card-text">Menteri</span>
                         </div>
@@ -44,9 +44,9 @@
 
         <div class="row d-flex justify-content-center">
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dlembaga) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dlembaga) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dlembaga }}</span><span class="card-text">Direktur Jenderal Hubungan & Kerja Sama Antar Lembaga</span>
                         </div>
@@ -54,9 +54,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dalumni) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dalumni) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dalumni }}</span> <span class="card-text">Direktur Jenderal Hubungan & Kerja Sama Antar Alumni</span>
                         </div>
@@ -64,9 +64,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dmanajemen) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_dmanajemen) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_dmanajemen }}</span> <span class="card-text">Direktur Jenderal Manajemen Kerja Kementerian</span>
                         </div>
@@ -77,9 +77,9 @@
         </div>
     </br>
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff1) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff1) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff1 }}</span> <span class="card-text">Staff Kementerian</span>
                         </div>
@@ -87,9 +87,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                 <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff2) }}">
+                    <a><img alt="" class="team-img" src="{{ asset('storage/'. $data1 -> gambar_staff2) }}">
                         <div class="card-title-wrap">
                             <span class="card-title">{{ $data1->nama_staff2 }}</span> <span class="card-text">Staff Kementerian</span> 
                         </div>
